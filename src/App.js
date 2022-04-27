@@ -1,24 +1,34 @@
-import logo from './logo.svg';
 import './App.css';
+import Diamond_Path from './components/DiamondPath';
+import {useState} from "react"
 
 function App() {
+  const [text, setText] = useState("");
+  
+  const onChange = (e) => {
+    setText(e.target.value);
+  };
+  const onSubmit = () =>{
+    setText("")
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <div>
+        <h2>Using SVG Text Path</h2>
+        <div>
+          <input
+          onChange={onChange}
+          name="input"
+          value={text}
+          placeholder="enter input  "
+          />
+          <button onClick={onSubmit} type="button">
+            Reset
+          </button>        
+        </div>
+        <Diamond_Path text={text}/>
+      </div>
+    </>
   );
 }
 
