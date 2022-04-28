@@ -14,8 +14,8 @@ function App() {
   }
   return (
     <>
-      <div>
-        <p>Enter Text here to see in shapes </p>
+      <div className='center'>
+        <h3>Enter Text here to see in shapes </h3>
         <input
         onChange={onChange}
         name="input"
