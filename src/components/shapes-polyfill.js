@@ -17,6 +17,7 @@ limitations under the License.
     "use strict";
     
     function Metrics(element) {
+        console.log("IT ARIVED")
         var computedStyle = getComputedStyle(element);
     
         // a full units map would call getUnitsMap, but that can significantly slow things down
