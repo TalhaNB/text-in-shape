@@ -1,6 +1,7 @@
 import './App.css';
 import Diamond_Path from './components/DiamondPath';
 import Shape from './components/Shape';
+import SimpleShapeOutside from './components/SimpleShapeOutside';
 import {useState} from "react"
 
 function App() {
@@ -14,7 +15,7 @@ function App() {
   }
   return (
     <>
-      <div className='center'>
+      {/* <div className='center'>
         <h3>Enter Text here to see in shapes </h3>
         <input
         onChange={onChange}
@@ -33,6 +34,9 @@ function App() {
       <div>
         <h2>Using SVG Text Path (diamond as example)</h2>
         <Diamond_Path text={text}/>
+      </div> */}
+      <div>
+        <SimpleShapeOutside />
       </div>
     </>
   );
